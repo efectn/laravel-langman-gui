@@ -3,7 +3,7 @@
 <p align="center">
 Langman is a GUI for managing JSON translations for Laravel 9.x. 
 
-Originally fork of [themsaid/laravel-langman-gui](https://github.com/themsaid/laravel-langman-gui), but under active maintenance.
+Originally forked from [themsaid/laravel-langman-gui](https://github.com/themsaid/laravel-langman-gui), but under active maintenance.
 <br>
 <br>
 <img src="https://s14.postimg.org/j99tukfch/Screen_Shot_2017-05-02_at_9.56.49_AM.png" alt="Laravel Langman">
@@ -28,8 +28,19 @@ php artisan vendor:publish --provider=Efectn\\LangmanGUI\\LangmanServiceProvider
 ```
 
 ## Usage
+1. Edit `routes/web.php`:
 
-Once you have added the Service Provider point your browser to `http://project.dev/langman`, using this interface you'll be able to
+Wrap routes like this.
+```php
+Route::group(['prefix' => 'langman', 'middleware' => ['web']], function () {
+    \Efectn\LangmanGUI\Manager::routes();
+});
+
+```
+
+2. Just Browse
+
+Enter `http://project.dev/langman`, using this interface you'll be able to
 browse translation keys in different languages, add/remove keys, scan your project files for missing translations, and finally save
 your changes to the language JSON files.
 

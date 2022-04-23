@@ -4,6 +4,7 @@ namespace Efectn\LangmanGUI;
 
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -185,5 +186,41 @@ class Manager
         }
 
         $this->disk->copyDirectory(resource_path('lang'), storage_path('langmanGUI/'.time()));
+    }
+
+    /**
+     * Generates routes of this package.
+     *
+     * @return void
+     */
+    public static function routes()
+    {
+        $as = 'langman.';
+        $namespace = '\\Efectn\\LangmanGUI\\Controllers\\';
+
+        Route::group(compact('as', 'namespace'), function () {
+            // register routes
+            Route::get('/', [
+                'uses' => 'LangmanController@index',
+                'as' => 'index',
+            ]);
+
+            Route::post('/scan', [
+                'uses' => 'LangmanController@scan',
+                'as' => 'scan',
+            ]);
+
+            Route::post('/save', [
+                'uses' => 'LangmanController@save',
+                'as' => 'save',
+            ]);
+
+            Route::post('/add-language', [
+                'uses' => 'LangmanController@addLanguage',
+                'as' => 'addLanguage',
+            ]);
+
+        
+        });
     }
 }

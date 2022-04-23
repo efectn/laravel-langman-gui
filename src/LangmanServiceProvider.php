@@ -21,8 +21,6 @@ class LangmanServiceProvider extends ServiceProvider
         ], 'assets');
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'langmanGUI');
-
-        $this->registerRoutes();
     }
 
     /**
@@ -40,22 +38,6 @@ class LangmanServiceProvider extends ServiceProvider
                 $this->app['path.lang'],
                 [$this->app['path.resources'], $this->app['path']]
             );
-        });
-    }
-
-    /**
-     * Register the Langman routes.
-     */
-    protected function registerRoutes()
-    {
-        $this->app['router']->group(config('langmanGUI.route_group_config'), function ($router) {
-            $router->get('/langman', 'LangmanController@index');
-
-            $router->post('/langman/scan', 'LangmanController@scan');
-
-            $router->post('/langman/save', 'LangmanController@save');
-
-            $router->post('/langman/add-language', 'LangmanController@addLanguage');
         });
     }
 }
