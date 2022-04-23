@@ -4,6 +4,7 @@ namespace Efectn\LangmanGUI\Controllers;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
+use Efectn\LangmanGUI\Manager;
 
 class LangmanController extends Controller
 {
