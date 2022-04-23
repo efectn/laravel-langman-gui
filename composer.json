@@ -1,33 +1,41 @@
 {
-    "name": "themsaid/laravel-langman-gui",
-    "description": "Manage language files with ease.",
+    "name": "efectn/laravel-langman-gui",
+    "description": "A GUI for managing JSON translations for Laravel 9.x.",
     "keywords": [
         "laravel",
         "localization",
-        "multilingual"
+        "multilingual",
+        "translation"
     ],
-    "homepage": "https://github.com/themsaid/laravel-langman-gui",
+    "homepage": "https://github.com/efectn/laravel-langman-gui",
     "license": "MIT",
     "authors": [
         {
+            "name": "Muhammed Efe Çetin",
+            "email": "efectn@protonmail.com",
+            "homepage": "https://6tel.net",
+            "role": "Maintainer"
+        },
+        {
             "name": "Mohamed Said",
             "email": "theMohamedSaid@gmail.com",
-            "homepage": "https://themsaid.com"
+            "homepage": "https://themsaid.com",
+            "role": "Original Developer"
         }
     ],
     "require": {
-        "php": "^7.0 || ^7.1",
-        "illuminate/translation": "~5|~6|~7|~8"
+        "php": ">=8.0",
+        "illuminate/translation": "~9"
     },
     "autoload": {
         "psr-4": {
-            "Themsaid\\LangmanGUI\\": "src"
+            "Efectn\\LangmanGUI\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Themsaid\\LangmanGUI\\LangmanServiceProvider"
+                "Efectn\\LangmanGUI\\LangmanServiceProvider"
             ]
         }
     }

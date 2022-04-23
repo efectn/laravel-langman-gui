@@ -1,6 +1,6 @@
 <?php
 
-namespace Themsaid\LangmanGUI;
+namespace Efectn\LangmanGUI;
 
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;

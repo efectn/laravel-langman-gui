@@ -1,6 +1,6 @@
 <?php
 
-namespace Themsaid\LangmanGUI;
+namespace Efectn\LangmanGUI;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;

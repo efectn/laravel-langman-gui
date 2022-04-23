@@ -1,14 +1,16 @@
 <h1 align="center">Laravel Language Manager</h1>
 
 <p align="center">
-Langman is a GUI for managing your JSON language files in a Laravel project.
+Langman is a GUI for managing JSON translations for Laravel 9.x. 
+
+Originally fork of [themsaid/laravel-langman-gui](https://github.com/themsaid/laravel-langman-gui), but under active maintenance.
 <br>
 <br>
 <img src="https://s14.postimg.org/j99tukfch/Screen_Shot_2017-05-02_at_9.56.49_AM.png" alt="Laravel Langman">
 <br>
-<a href="https://packagist.org/packages/themsaid/laravel-langman-gui"><img src="https://poser.pugx.org/themsaid/laravel-langman-gui/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/themsaid/laravel-langman-gui"><img src="https://poser.pugx.org/themsaid/laravel-langman-gui/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/themsaid/laravel-langman-gui"><img src="https://poser.pugx.org/themsaid/laravel-langman-gui/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/efectn/laravel-langman-gui"><img src="https://poser.pugx.org/efectn/laravel-langman-gui/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/efectn/laravel-langman-gui"><img src="https://poser.pugx.org/efectn/laravel-langman-gui/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/efectn/laravel-langman-gui"><img src="https://poser.pugx.org/efectn/laravel-langman-gui/license.svg" alt="License"></a>
 </p>
 
 ## Installation
@@ -16,19 +18,13 @@ Langman is a GUI for managing your JSON language files in a Laravel project.
 Begin by installing the package through Composer. Run the following command in your terminal:
 
 ```
-$ composer require themsaid/laravel-langman-gui
-```
-
-Once done, add the following line in your providers array of `config/app.php`:
-
-```php
-Themsaid\LangmanGUI\LangmanServiceProvider::class
+$ composer require efectn/laravel-langman-gui
 ```
 
 Then publish the configuration file & assets:
 
 ```
-php artisan vendor:publish --provider=Themsaid\\LangmanGUI\\LangmanServiceProvider
+php artisan vendor:publish --provider=Efectn\\LangmanGUI\\LangmanServiceProvider
 ```
 
 ## Usage
