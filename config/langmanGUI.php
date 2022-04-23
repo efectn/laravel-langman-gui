@@ -11,13 +11,5 @@ return [
      * PHP function we'll be looking for in your project files to collect
      * un-translated keys.
      */
-    'localization_methods' => ['__'],
-
-    /**
-     * Configurations for the route group that serves the Langman Controller.
-     */
-    'route_group_config' => [
-        'middleware' => ['web'],
-        'namespace' => 'Efectn\LangmanGUI'
-    ]
+    'localization_methods' => ['__']
 ];

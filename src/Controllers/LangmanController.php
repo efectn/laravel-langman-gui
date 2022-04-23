@@ -1,11 +1,11 @@
 <?php
 
-namespace Efectn\Controllers\LangmanGUI;
+namespace Efectn\LangmanGUI\Controllers;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
-class LangmanController
+class LangmanController extends Controller
 {
     /**
      * Return view for index screen.
